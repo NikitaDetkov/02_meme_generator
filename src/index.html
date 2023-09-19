@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/index.css">
+    <title>Meme Generator</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h3>Meme Generator</h3>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <div class="constructor">
+                <div class="constructor__menu">
+                    <div class="constructor__menu-item">
+                        <button class="btn add-text-btn" id="add-text-btn">
+                            Add text
+                        </button>
+                    </div>
+                    <div class="constructor__menu-item message-editor show" id="message-editor">
+                        <h4>Выберите текстовый элемент</h4>
+                    </div>
+                    <div class="constructor__menu-item text-editor" id="text-editor">
+                        <div class="text-editor__elem">
+                            <h4>Font color</h4>
+                            <div class="color-container">
+                                <span>Red</span>
+                                <input type="range" min="0" max="255" value="0" id="font-color-red">
+                                <span>Green</span>
+                                <input type="range" min="0" max="255" value="0" id="font-color-green">
+                                <span>Blue</span>
+                                <input type="range" min="0" max="255" value="0" id="font-color-blue">
+                            </div>
+                        </div>
+                        <div class="text-editor__elem">
+                            <div class="background-editor-header">
+                                <h4>Background color</h4>
+                                <input type="checkbox" class="background-none" name="background-none" id="background-none" checked>
+                            </div>
+                            <div class="color-container">
+                                <span>Red</span>
+                                <input type="range" min="0" max="255" value="0" id="background-color-red">
+                                <span>Green</span>
+                                <input type="range" min="0" max="255" value="0" id="background-color-green">
+                                <span>Blue</span>
+                                <input type="range" min="0" max="255" value="0" id="background-color-blue">
+                            </div>
+                        </div>
+                        <div class="text-editor__elem">
+                            <h4>Font size</h4>
+                            <div class="font-size-container">
+                                <span class="font-size__btn" id="minus">&#8722;</span>
+                                <span class="font-size__current" id="current-font-size">16</span>
+                                <span class="font-size__btn" id="plus">+</span>
+                            </div>
+                        </div>
+                        <div class="text-editor__elem">
+                            <h4>Font family</h4>
+                            <div class="font-family-container">
+                                <select name="font-family" class="font-family-input" id="font-family">
+                                    <option value="Montserrat-font">Montserrat</option> 
+                                    <option value="Arial">Arial</option> 
+                                    <option value="Garamond">Garamond</option>  
+                                    <option value="Times">Times New Roman</option>
+                                    <option value="Courier">Courier</option>   
+                                    <option value="Impact">Impact</option>   
+                                    <option value="Verdana">Verdana</option>  
+                                    <option value="Gabriola">Gabriola</option> 
+                                    <option value="Monotype Corsiva">Monotype Corsiva</option>  
+                                </select>
+                            </div>
+                        </div>
+                        <div class="text-editor__elem">
+                            <h4>Font style</h4>
+                            <div class="font-style-container">
+                                <input type="radio" name="font-style" value="normal" id="style-normal" onchange="changeFontStyle()" checked>
+                                <label for="normal">Normal</label>
+                                <input type="radio" name="font-style" value="italic" id="style-italic" onchange="changeFontStyle()">
+                                <label for="italic">Italic</label>
+                            </div>
+                        </div>
+                        <div class="text-editor__elem">
+                            <h4>Font weight</h4>
+                            <div class="font-weight-container">
+                                <input type="radio" name="font-weight" value="normal" id="weight-normal" onchange="changeFontWeight()" checked>
+                                <label for="normal">Normal</label>
+                                <input type="radio" name="font-weight" value="bold" id="weight-bold" onchange="changeFontWeight()">
+                                <label for="bold">Bold</label>
+                            </div>
+                        </div>
+                        <div class="text-editor__elem">
+                            <button class="btn delete-text-btn" id="delete-text-btn">
+                                Delete text
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="constructor__image">
+                    <div class="constructor__image-preview-wrapper" id="constructor__image-preview-wrapper">
+                        <img src="" id="image-preview" class="constructor__image-preview">
+                    </div>
+
+                    <div class="container-btn">
+                        <label class="constructor__image-input-wrapper">
+                            <input type="file" name="image-input" 
+                                id="image-input" accept="image/*">
+                            <span>Add image</span>
+                        </label>
+                        <button class="btn" id="save-image-btn">
+                            Save image
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__item">
+                    Meme generator
+                </div>
+                <div class="footer__item">
+                    Detkov Nikita
+                </div>
+                <div class="footer__item">
+                    2023
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/scripts.js"></script>
+</body>
+</html>

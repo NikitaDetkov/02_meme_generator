@@ -1,0 +1,15 @@
+footer {
+    flex-grow: 0;
+    background-color: var(--light-gray);
+    font-size: 16px;
+
+    padding: 10px 40px;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    width: 100%;
+}

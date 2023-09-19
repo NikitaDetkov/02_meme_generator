@@ -1,0 +1,266 @@
+
+.constructor {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.constructor__image, .constructor__menu {
+    padding: 10px;
+    border: 1px solid var(--light-gray);
+    border-radius: 6px;
+}
+
+.constructor__menu {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    gap: 20px;
+}
+
+.btn {
+    font: inherit;
+    padding: 10px 10px;
+    background-color: white;
+    border-radius: 4px;
+    width: 150px;
+    font-size: 14px;
+
+    border: 1px solid var(--light-gray);
+
+    display: flex;
+    justify-content: center;
+
+    color: var(--dark-gray);
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.add-text-btn {
+    display: flex;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: var(--light-gray);
+}
+
+.btn:active {
+    background-color: gray;
+    border-color: gray;
+    color: white;
+}
+
+.constructor__image-preview-wrapper {
+    height: 520px;
+    width: 800px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.constructor__image-preview {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+canvas {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.container-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.constructor__image-input-wrapper {
+	position: relative;
+	display: inline-block;
+}
+
+.constructor__image-input-wrapper span {
+	position: relative;
+	display: inline-block;
+    cursor: pointer;
+
+    text-align: center;
+    padding: 10px 10px;
+
+
+    font: inherit;
+    background-color: white;
+    border-radius: 4px;
+    width: 150px;
+    font-size: 14px;
+
+    border: 1px solid var(--light-gray);
+
+    color: var(--dark-gray);
+    font-weight: 500;
+}
+
+.constructor__image-input-wrapper input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+ 
+/* Hover/active */
+.constructor__image-input-wrapper:hover span {
+    background-color: var(--light-gray);
+}
+.constructor__image-input-wrapper:active span {
+    background-color: gray;
+    border-color: gray;
+    color: white;
+}
+
+.input-text {
+    width: max-content;
+    position: absolute;
+    font-family: 'Montserrat-font';
+    z-index: 1000;
+    padding: 0;
+    border: 1px solid rgb(188, 188, 188);
+    font: inherit;
+    outline: none;
+
+    line-height: 0;
+    padding: 5px;
+}
+
+.input-text:focus {
+    outline: none;
+}
+
+.input-text:active {
+    cursor: pointer;
+}
+
+.message-editor {
+    height: 0;
+    width: 0;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.message-editor.show {
+    height: auto;
+    width: 100%;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.text-editor {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.text-editor.show {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 15px;
+}
+
+.text-editor__elem h4 {
+    margin-bottom: 5px;
+}
+
+.color-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4px;
+}
+
+.font-size-container {
+    display: flex;
+    justify-content: flex-start;
+    width: max-content;
+    align-items: center;
+    gap: 10px;
+}
+
+.font-size__current {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.font-size__btn {
+    font-size: 20px;
+    border: 1px solid var(--light-gray);
+    border-radius: 20px;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.font-size__btn:hover {
+    background-color: var(--light-gray);
+}
+
+.font-size__btn:active {
+    background-color: gray;
+    border-color: gray;
+    color: white;
+}
+
+.font-style-container, .font-weight-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto 1fr;
+
+    gap: 5px;
+}
+
+.font-family-input {
+    font: inherit;
+    outline: none;
+    width: 100%;
+}
+
+.background-editor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.background-editor-header input {
+    height: 16px;
+    width: 16px;
+}
+
+.delete-text-btn {
+    background-color: rgb(235, 94, 81);
+    border-color: rgb(235, 94, 81);
+    color: white;
+}
+
+.delete-text-btn:hover {
+    background-color: rgb(216, 86, 74);
+    border-color: rgb(216, 86, 74);
+}
+
+.delete-text-btn:active {
+    background-color: rgb(195, 78, 68);
+    border-color: rgb(195, 78, 68);
+}
+
